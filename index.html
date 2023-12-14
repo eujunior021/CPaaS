@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatibile" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/img/logoescura.jpg.png" type="image/x-icon">
+    <link rel="stylesheet" href="../estilo.css" >
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+
+    <title>criar conta</title>
+</head>
+<body>
+
+    <div id="toast-modal" class="toast-modal"></div>
+    <div id="toast-sucesso" class="toast-modal"></div>
+
+    <i id="icon" class="fa-solid fa-moon"></i>
+
+    <div id="caixa" class="caixa">
+        <div class="container"> 
+            <div class="header">
+                <img src="./img/logoescura.jpg.png" alt="Logo escura" id="figura" >
+                
+            </div>
+        
+            <h2>Crie Uma Conta ou <a class="a" href="/login.html">Faça Login</a> </h2>
+            <form id="form" class="form">
+            <div class="form-control ">
+                <label for="username" >Nome Completo</label>
+                <input type="text"                 
+                id="name" 
+                placeholder="Digite seu nome completo" minlength="15" maxlength="60" 
+                required
+                />
+                
+            </div>   
+
+                <div class="form-control ">
+                    <label for="namemother">Nome da mãe</label>
+                    <input type="text" id="namemother" 
+                    placeholder="Digite o nome da mãe" minlength="15" maxlength="60" required />
+                </div>    
+                    
+
+                <div class="form-control ">
+                    <label for="date">Data de nascimento</label>
+                    <input type="date" id="date"
+                    placeholder="00/00/0000"  required /> 
+                    
+                </div>
+
+                <div class="form-control ">
+                    <label for="sex">Sexo</label>
+                    <select class="sex" id="sex" required>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="outros">outros</option>
+                    </select>
+                    
+                </div>
+
+
+                <div class="form-control ">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf"
+                    pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required />
+                </div>
+
+                <div class="form-control ">
+                    <label for="number">Celular</label>
+                    <input type="text" id="celular"
+                    pattern="\(\d{2}\) \d{5}-\d{4}"  required />
+    
+                </div>
+
+                <div class="form-control ">
+                    <label for="numberfixo">Telefone fixo</label>
+                    <input type="text" id="numberfixo"
+                    pattern="\(\d{2}\) \d{4}-\d{4}"  required />
+                    
+                    
+                    
+                </div>
+                
+                <div class="form-control">
+                    <label for="Endereço">CEP</label>
+                    <input type="text" id="cep"
+                    pattern="\d{5}-\d{3}" required />                
+    
+                </div>
+            
+            <div class="form-control">
+                <label for="Endereço">Rua</label>
+                <input type="text" id="rua"
+                placeholder="Rua" required />                
+
+            </div>
+
+
+            <div class="form-control">
+                <label for="Endereço">Bairro</label>
+                <input type="text" id="bairro"
+                placeholder="Bairro" required />                
+
+            </div>
+
+
+
+            <div class="form-control">
+                <label for="Endereço">Cidade</label>
+                <input type="text" id="cidade"
+                placeholder="Cidade" required />                
+
+            </div>
+
+
+            <div class="form-control">
+                <label for="Endereço">Complemento</label>
+                <input type="text" id="complemento"
+                placeholder="Complemento" required />                
+
+            </div>
+
+
+
+            <div class="form-control ">
+                <label for="username" >Nome de usuário</label>
+                <input type="text" 
+                required
+                id="username" 
+                placeholder="Digite o nome de usuário" 
+                maxlength="6"/>
+            </div>    
+    
+            <div class="form-control">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Digite uma senha alfabética" minlength="8" maxlength="8" pattern="^[a-zA-Z]{8}$" required />
+                <span id="passwordError" class="error-message"></span>
+
+
+            </div>
+
+            <div class="form-control ">
+                <label for="passowd-conformation">Confirma Senha</label>
+                <input type="password" id="confirmasenha"
+                placeholder="Digite a senha novemente" minlength="8" maxlength="8" required />
+                <span id="passwordError" class="error-message"></span>
+
+                        
+            </div>
+            <div class="entrar">
+                <button type="submit" id="submitButton">Enviar</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
